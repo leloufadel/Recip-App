@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/sign_out_user', to: 'users#sign_out_user', as: 'sign_out_user'
+  devise_for :users
+  root 'users#index'
 end
+
+
+# Rails.application.routes.draw do
+#   devise_for :users, path: 'auth',
+#   path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret',
+#    confirmation: 'verification', unlock: 'unblock', registration: 'register',
+#    sign_up: 'cmon_let_me_in' } 
+#    devise_scope :user do
+#     get '/users/sign_out', to: 'devise/sessions#destroy'
+#     root to: 'devise/sessions#new'
+#   end
+#     # root 'users#index'
+# end
