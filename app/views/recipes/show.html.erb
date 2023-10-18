@@ -1,0 +1,14 @@
+<!-- app/views/recipes/show.html.erb -->
+<head>  <%= stylesheet_link_tag 'navbar' %>
+</head>
+<%= render 'shared/navbar' %>
+<body>
+<h1><%= @recipe.name %></h1>
+
+<h2>Description:</h2>
+<p><%= @recipe.description %></p>
+
+<%= link_to 'Back to My Recipes', recipes_path %>
+
+<%= link_to 'Delete', @recipe, method: :delete, data: { confirm: 'Are you sure?' } if @recipe.user == current_user %>
+</body>

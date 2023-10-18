@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Include your CSS file using the stylesheet_link_tag helper -->
+  <%= stylesheet_link_tag 'recipe' %>
+  
+  <!-- Other head content, like the title, meta tags, etc. -->
+  <title>Add New Recipe</title>
+  <!-- ... other head content ... -->
+
+</head>
+
+<body>
+
+<div class="form-container">
+  <h1 class="form-title">Add New Recipe</h1>
+  
+<%= form_for(@recipe) do |f| %>
+  <div class="field">
+    <%= f.text_field :name, placeholder: 'Recipe Name' %>
+  </div>
+
+  <div class="field">
+    <%= f.number_field :preparation_time, placeholder: 'Preparation Time', step: 1 %>
+  </div>
+
+  <div class="field">
+    <%= f.number_field :cooking_time, placeholder: 'Cooking Time', step: 1 %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :description, placeholder: 'Description' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Add New Recipe' %>
+  </div>
+  
+<% end %>
+
+  <%= link_to 'Back to My Recipes', recipes_path, class: 'back-link' %>
+
+</div>
+</body>
+</html>
+
