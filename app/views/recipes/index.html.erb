@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag 'navbar' %>
+  <%= stylesheet_link_tag 'index' %> 
+</head>
+<body>
+  <%= render 'shared/navbar' %>
+  <div class="container">
+  <div class="content-box">
+    <h1>Welcome To Recipe Page</h1>
+
+    <%= link_to 'Add New Recipe', new_recipe_path, class: 'btn btn-primary' %>
+
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li class="recipe-item">
+          <p class="recipe-name"><%= recipe.name %></p>
+          <p> Description :<%= recipe.description %></p>
+          
+<%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' if recipe.user == current_user %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
