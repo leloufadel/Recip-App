@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag 'recipe' %>
+  
+  <title>Add New Food</title>
+</head>
+
+<body>
+   <div class="form-container">
+    <h1 class="form-title">Add New Food</h1>
+    <%= form_for(@food) do |f| %>
+      <div class="field">
+        <%= f.text_field :name, placeholder: 'Food Name' %>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :measurement_unit, placeholder: 'Measurement Unit' %>
+      </div>
+
+      <div class="field">
+        <%= f.number_field :price, placeholder: 'Price', step: 1 %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit 'Add New Food', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+      <%= link_to 'Back to My Recipes', recipes_path, class: 'back-link' %>
+
+  </div>
+</body>
+</html>

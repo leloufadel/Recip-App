@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
   <%= stylesheet_link_tag 'navbar' %>
   <%= stylesheet_link_tag 'custom' %>
@@ -7,37 +9,55 @@
   <div class="container">
     <h1 class="recipe-name text-center"><%= @recipe.name %></h1>
 
-   <%= form_for @recipe, url: recipe_path(@recipe), method: :patch do |f| %>
-  <div class="recipe-details">
-    <div class="details-left">
-      <p>Preparation Time: <%= @recipe.preparation_time %> hours</p>
-      <p>Cooking Time: <%= @recipe.cooking_time %> hours</p>
-      <p>Public:
-        <label class="switch">
-          <%= f.check_box :public, { class: "form-check-input", id: "publicToggle" }, "true", "false" %>
-          <span class="slider round"></span>
-        </label>
-      </p>
-    </div>
-  </div>
-  <div class="details-right">
-    <button class="add-ingredient-button">Add Ingredient</button>
-    <button class="generate-shopping-button">Generate Shopping</button>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Save', class: 'save-button' %>
-  </div>
-<% end %>
+    <%= form_for @recipe, url: recipe_path(@recipe), method: :patch do |f| %>
+      <div class="recipe-details">
+        <div class="details-left">
+          <p>Preparation Time: <%= @recipe.preparation_time %> hours</p>
+          <p>Cooking Time: <%= @recipe.cooking_time %> hours</p>
+          <p>Public:
+            <label class="switch">
+              <%= f.check_box :public, class: "form-check-input", id: "publicToggle" %>
+              <span class="slider round"></span>
+            </label>
+          </p>
+        </div>
+      </div>
+      <div class="details-right">
+       <button class="add-ingredient-button">
+       <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe) %>
+       </button>
+
+        <button class="generate-shopping-button">Generate Shopping</button>
+      </div>
+      <div class="actions">
+        <%= f.submit 'Save', class: 'save-button' %>
+      </div>
+    <% end %>
 
     <table class="food-table">
-      <thead>
-        <tr>
-          <th>Food</th>
-          <th>Quantity</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-    </table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Total Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Loop through recipe_foods and populate the table -->
+    <% @recipe.recipe_foods.each do |recipe_food| %>
+      <tr>
+        <td><%= recipe_food.food.name %></td>
+        <td><%= recipe_food.quantity %></td>
+        <td><%= recipe_food.total_price %></td>
+        <td>
+          <!-- Any actions you want to include for each recipe food -->
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
   </div>
 </body>
 </html>
