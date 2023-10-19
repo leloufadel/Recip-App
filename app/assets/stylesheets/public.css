@@ -1,7 +1,6 @@
-/* Add your custom CSS for styling public recipes here */
 
 .public-recipes-container {
-  background-color: #867373; /* Customize background color */
+  background-color: #867373;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -13,24 +12,24 @@
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #fff; /* Customize title text color */
+  color: #fff;
 }
 
 .public-recipes-list {
-  background-color: #555; /* Customize list background color */
+  background-color: #555;
   padding: 20px;
   border-radius: 10px;
 }
 
 .no-recipes-message {
   font-size: 24px;
-  color: #888; /* Customize message text color */
+  color: #888;
 }
 
 .recipe-card {
   display: block;
   text-decoration: none;
-  background-color: #666; /* Customize card background color */
+  background-color: #666;
   border-radius: 10px;
   margin: 20px 0;
   padding: 20px;
@@ -50,12 +49,12 @@
 .recipe-name {
   font-size: 28px;
   font-weight: bold;
-  color: #fff; /* Customize name text color */
+  color: #fff;
 }
 
 .recipe-author {
   font-size: 18px;
-  color: #ccc; /* Customize author text color */
+  color: #ccc;
 }
 
 .recipe-card-right {
@@ -65,5 +64,5 @@
 
 .recipe-details {
   font-size: 18px;
-  color: #ccc; /* Customize details text color */
+  color: #ccc;
 }
