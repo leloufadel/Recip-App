@@ -1,98 +1,97 @@
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
-    background-color: #f5edf6; 
-    margin: 0;
-  }
-  
-  form {
-    background-color: #ffffff; 
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5edf6;
+  margin: 0;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .form-container {
-    text-align: center;
-  }
-  
-  .form-title {
-    font-weight: bold;
-  }
-  .back-link {
-    text-decoration: none;
-    color: #333; 
-    font-weight: bold;
-  }
-  .field input[type="text"],
-  .field textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  /* Style the submit button */
-  .actions input[type="submit"] {
-    background-color: #4CAF50; 
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
+  text-align: center;
+}
 
-  .actions {
-    text-align: center;
-  }
-  
-  .field label {
-    display: none;
-  }
-  
-  .field input[type="text"]::placeholder,
-  .field textarea::placeholder {
-    font-style: italic;
-    color: #999; 
-  }
+.form-title {
+  font-weight: bold;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.field input[type="text"],
+.field textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Style the submit button */
+.actions input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions {
+  text-align: center;
+}
+
+.field label {
+  display: none;
+}
+
+.field input[type="text"]::placeholder,
+.field textarea::placeholder {
+  font-style: italic;
+  color: #999;
+}
+
 .field input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
-  .field input[type="number"]::-webkit-inner-spin-button,
-  .field input[type="number"]::-webkit-outer-spin-button {
-  
-    margin: 0;
-  }
-  
-  .field input[type="number"]::-webkit-inner-spin-button {
-    background-color: #4CAF50; 
-    border-radius: 0;
-    padding: 5px;
-  }
-  
-  .field input[type="number"]::-webkit-outer-spin-button {
-    background-color: #4CAF50; 
-    border-radius: 0;
-    padding: 5px;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+.field input[type="number"]::-webkit-inner-spin-button,
+.field input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+}
+
+.field input[type="number"]::-webkit-inner-spin-button {
+  background-color: #4caf50;
+  border-radius: 0;
+  padding: 5px;
+}
+
+.field input[type="number"]::-webkit-outer-spin-button {
+  background-color: #4caf50;
+  border-radius: 0;
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
