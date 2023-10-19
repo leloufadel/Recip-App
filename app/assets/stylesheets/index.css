@@ -1,51 +1,47 @@
-/* CSS for centering the content and providing a box-like appearance */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f2f2f2; /* Change to your desired background color */
-    margin: 0;
-  }
-  
-  .content-box {
-    background-color: #ffffff; /* Change to your desired content background color */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 600px; /* Set a maximum width for the content box */
-    margin: 0 auto; /* Center the content box horizontally */
-  }
-  
-  /* Styles for individual recipe items */
-  .recipe-item {
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #ccc; /* Add a border to each recipe item */
-    border-radius: 5px;
-    background-color: #f9f9f9; /* Background color for each recipe item */
-    text-align: left; /* Left-align text within the recipe items */
-  }
-  
-  .recipe-name {
-    font-weight: bold;
-  }
-  
-  /* Style for the Delete button */
-  .delete-button {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #FF5733; /* Change to your desired button color */
-    /* color: white; */
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .delete-button:hover {
-    background-color: #FF0000; 
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.content-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.recipe-item {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.recipe-name {
+  font-weight: bold;
+}
+
+/* Style for the Delete button */
+.delete-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #ff5733;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.delete-button:hover {
+  background-color: #f00;
+}

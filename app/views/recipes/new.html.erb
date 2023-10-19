@@ -7,40 +7,38 @@
   <!-- Other head content, like the title, meta tags, etc. -->
   <title>Add New Recipe</title>
   <!-- ... other head content ... -->
-
 </head>
 
 <body>
+  <div class="form-container">
+    <h1 class="form-title">Add New Recipe</h1>
+    
+    <%= form_for(@recipe) do |f| %>
+      <div class="field">
+        <%= f.text_field :name, placeholder: 'Recipe Name' %>
+      </div>
 
-<div class="form-container">
-  <h1 class="form-title">Add New Recipe</h1>
-  
-<%= form_for(@recipe) do |f| %>
-  <div class="field">
-    <%= f.text_field :name, placeholder: 'Recipe Name' %>
+      <div class="field">
+        <%= f.number_field :preparation_time, placeholder: 'Preparation Time', step: 1 %>
+      </div>
+
+      <div class="field">
+        <%= f.number_field :cooking_time, placeholder: 'Cooking Time', step: 1 %>
+      </div>
+
+      <div class="field">
+        <%= f.text_area :description, placeholder: 'Description' %>
+      </div>
+
+      <div class="form-check">
+        <%= f.check_box :public, class: "form-check-input" %>
+        <%= f.label :public, "Make Recipe Public", class: "form-check-label" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit 'Add New Recipe', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.number_field :preparation_time, placeholder: 'Preparation Time', step: 1 %>
-  </div>
-
-  <div class="field">
-    <%= f.number_field :cooking_time, placeholder: 'Cooking Time', step: 1 %>
-  </div>
-
-  <div class="field">
-    <%= f.text_area :description, placeholder: 'Description' %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit 'Add New Recipe' %>
-  </div>
-  
-<% end %>
-
-  <%= link_to 'Back to My Recipes', recipes_path, class: 'back-link' %>
-
-</div>
 </body>
 </html>
-
