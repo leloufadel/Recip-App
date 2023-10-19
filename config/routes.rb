@@ -1,14 +1,23 @@
+# Rails.application.routes.draw do
+#   get '/sign_out_user', to: 'users#sign_out_user', as: 'sign_out_user'
+#   devise_for :users
+
+#   resources :recipes, only: [:create, :index, :destroy, :show, :new]
+
+#   root 'recipes#index'
+# end
+
+
 Rails.application.routes.draw do
   get '/sign_out_user', to: 'users#sign_out_user', as: 'sign_out_user'
   devise_for :users
 
-  resources :recipes, only: [:create, :index, :destroy, :show, :new]
+  resources :recipes, only: [:create, :index, :destroy, :show, :new, :update] do
+    get 'public_recipes', on: :collection
+  end
 
   root 'recipes#index'
 end
-
-
-# config/routes.rb
 
 
 

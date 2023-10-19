@@ -37,12 +37,21 @@ class RecipesController < ApplicationController
   #   @recipe.toggle!(:public)
   #   return unless @recipe.save
 
-  #   redirect_to recipe_path, notice: 'Recipe was successfully updated.'
+  #   redirect_to , noticrecipe_pathe: 'Recipe was successfully updated.'
   # end
 
-  # def public_recipes
-  #   @public_recipes = Recipe.where(public: true)
-  # end
+  def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update(recipe_params)
+      redirect_to @recipe, notice: 'Recipe updated successfully.'
+    else
+      render 'show'
+    end
+  end
+  def public_recipes
+    @public_recipes = Recipe.where(public: true).order(created_at: :desc)
+  end
+
 
   private
 

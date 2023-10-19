@@ -137,4 +137,15 @@
   .action-button:hover {
     background-color: #d32f2f;
   }
-  
+  .save-button{
+    background-color: #4336f4;
+    color: white;
+    border: none;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }

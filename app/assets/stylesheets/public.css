@@ -1,0 +1,70 @@
+/* Add your custom CSS for styling public recipes here */
+
+.public-recipes-container {
+    background-color: #867373; /* Customize background color */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .public-recipes-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* Customize title text color */
+  }
+  
+  .public-recipes-list {
+    background-color: #555; /* Customize list background color */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .no-recipes-message {
+    font-size: 24px;
+    color: #888; /* Customize message text color */
+  }
+  
+  .recipe-card {
+    display: block;
+    text-decoration: none;
+    background-color: #666; /* Customize card background color */
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  
+  .recipe-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .recipe-card-left {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .recipe-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff; /* Customize name text color */
+  }
+  
+  .recipe-author {
+    font-size: 18px;
+    color: #ccc; /* Customize author text color */
+  }
+  
+  .recipe-card-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .recipe-details {
+    font-size: 18px;
+    color: #ccc; /* Customize details text color */
+  }
+  

@@ -1,27 +1,34 @@
-<!-- app/views/recipes/show.html.erb -->
-<head>  <%= stylesheet_link_tag 'navbar' %>
+<head>
+  <%= stylesheet_link_tag 'navbar' %>
   <%= stylesheet_link_tag 'custom' %>
 </head>
 <%= render 'shared/navbar' %>
 <body>
   <div class="container">
     <h1 class="recipe-name text-center"><%= @recipe.name %></h1>
-    <div class="recipe-details">
-      <div class="details-left">
-        <p>Preparation Time: <%= @recipe.preparation_time %> hours</p>
-        <p>Cooking Time: <%= @recipe.cooking_time %> hours</p>
-        <p>Public: 
-          <label class="switch">
-            <input type="checkbox" id="publicToggle" <%= 'checked' if @recipe.public? %> >
-            <span class="slider round"></span>
-          </label>
-        </p>
-      </div>
-      <div class="details-right">
-        <button class="add-ingredient-button">Add Ingredient</button>
-        <button class="generate-shopping-button">Generate Shopping</button>
-      </div>
+
+   <%= form_for @recipe, url: recipe_path(@recipe), method: :patch do |f| %>
+  <div class="recipe-details">
+    <div class="details-left">
+      <p>Preparation Time: <%= @recipe.preparation_time %> hours</p>
+      <p>Cooking Time: <%= @recipe.cooking_time %> hours</p>
+      <p>Public:
+        <label class="switch">
+          <%= f.check_box :public, { class: "form-check-input", id: "publicToggle" }, "true", "false" %>
+          <span class="slider round"></span>
+        </label>
+      </p>
     </div>
+  </div>
+  <div class="details-right">
+    <button class="add-ingredient-button">Add Ingredient</button>
+    <button class="generate-shopping-button">Generate Shopping</button>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save', class: 'save-button' %>
+  </div>
+<% end %>
+
     <table class="food-table">
       <thead>
         <tr>
@@ -34,4 +41,3 @@
   </div>
 </body>
 </html>
-
