@@ -27,7 +27,12 @@
        <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe) %>
        </button>
 
-        <button class="generate-shopping-button">Generate Shopping</button>
+        <button class="add-ingredient-button">
+<%= link_to 'Generate Shopping List', shopping_lists_path(recipe_id: @recipe.id), class: 'generate-shopping-button' %>
+       </button>
+
+
+        </button>
       </div>
       <div class="actions">
         <%= f.submit 'Save', class: 'save-button' %>
@@ -45,14 +50,19 @@
   </thead>
   <tbody>
     <!-- Loop through recipe_foods and populate the table -->
-    <% @recipe.recipe_foods.each do |recipe_food| %>
+    <% @recipe.recipe_foods.each do |food| %>
       <tr>
-        <td><%= recipe_food.food.name %></td>
-        <td><%= recipe_food.quantity %></td>
-        <td><%= recipe_food.total_price %></td>
-        <td>
-          <!-- Any actions you want to include for each recipe food -->
-        </td>
+        <td><%= food.food.name %></td>
+        <td><%= food.quantity %></td>
+ <td>$ <%= food.food.price * food.quantity %></td>
+
+
+<td>
+  <!-- Add a "Delete" button to delete the recipe food -->
+  <%= form_with model: food, url: recipe_recipe_food_path(@recipe, food), method: :delete, data: { confirm: 'Are you sure you want to delete this recipe food?' } do |f| %>
+    <span><%= f.submit 'Delete', class: 'delete-button' %></span>
+  <% end %>
+</td>
       </tr>
     <% end %>
   </tbody>

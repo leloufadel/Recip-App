@@ -2,13 +2,26 @@
 <html>
 <head>
   <%= stylesheet_link_tag 'recipe' %>
+    <%= stylesheet_link_tag 'navbar' %>
   
   <title>Add New Food</title>
 </head>
 
 <body>
+  <%= render 'shared/navbar' %>
    <div class="form-container">
     <h1 class="form-title">Add New Food</h1>
+<% if @food.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@food.errors.count, "error") %> prohibited this food from being saved:</h2>
+        <ul>
+          <% @food.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <%= form_for(@food) do |f| %>
       <div class="field">
         <%= f.text_field :name, placeholder: 'Food Name' %>

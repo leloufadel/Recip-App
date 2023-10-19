@@ -14,10 +14,11 @@ Rails.application.routes.draw do
 
   resources :recipes, only: [:create, :index, :destroy, :show, :new, :update] do
     get 'public_recipes', on: :collection
-    resources :recipe_foods, only: [:new, :create]
+    resources :recipe_foods, only: [:new, :create, :show, :destroy]
   end
 
   resources :foods, only: [:new, :create, :show, :destroy]
+  resources :shopping_lists, only: [:index]
 
   root 'recipes#index'
 end
