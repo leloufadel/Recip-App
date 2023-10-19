@@ -53,7 +53,6 @@ class RecipesController < ApplicationController
     @public_recipes = Recipe.where(public: true).order(created_at: :desc)
   end
 
-
   private
 
   def recipe_params
