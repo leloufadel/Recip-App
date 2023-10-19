@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @recipes = Recipe.where(user_id: current_user.id)
   end
@@ -24,8 +26,10 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    Recipe.find(params[:id]).destroy
-    redirect_to recipes_path
+    @recipe = Recipe.find(params[:id])
+    authorize! :destroy, @recipe
+    @recipe.destroy
+    redirect_to recipes_path, notice: 'Recipe was successfully deleted.'
   end
 
   # def update
@@ -43,6 +47,6 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description, :preparation_time, :cooking_time)
+    params.require(:recipe).permit(:name, :description, :preparation_time, :cooking_time, :public)
   end
 end

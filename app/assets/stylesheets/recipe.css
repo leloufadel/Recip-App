@@ -1,4 +1,4 @@
-/* CSS for centering the form and setting background color */
+
 body {
     display: flex;
     justify-content: center;
@@ -10,12 +10,12 @@ body {
   }
   
   form {
-    background-color: #ffffff; /* Change this to your desired form background color */
+    background-color: #ffffff; 
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  /* Center and style the form title */
+  
 .form-container {
     text-align: center;
   }
@@ -28,9 +28,6 @@ body {
     color: #333; 
     font-weight: bold;
   }
-  
-  
-  /* Style the input fields */
   .field input[type="text"],
   .field textarea {
     width: 100%;
@@ -44,7 +41,7 @@ body {
   
   /* Style the submit button */
   .actions input[type="submit"] {
-    background-color: #4CAF50; /* Change this to your desired button color */
+    background-color: #4CAF50; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -52,12 +49,11 @@ body {
     cursor: pointer;
   }
   
-  /* Center the submit button */
+
   .actions {
     text-align: center;
   }
   
-  /* Remove labels and style placeholders */
   .field label {
     display: none;
   }
@@ -65,9 +61,8 @@ body {
   .field input[type="text"]::placeholder,
   .field textarea::placeholder {
     font-style: italic;
-    color: #999; /* Change this to your desired placeholder text color */
+    color: #999; 
   }
-  /* Style number input fields */
 .field input[type="number"] {
     width: 100%;
     padding: 10px;
@@ -78,15 +73,13 @@ body {
     font-size: 16px;
   }
   
-  /* Style the up and down arrows */
+
   .field input[type="number"]::-webkit-inner-spin-button,
   .field input[type="number"]::-webkit-outer-spin-button {
-    /* -webkit-appearance: none;
-    appearance: none; */
+  
     margin: 0;
   }
   
-  /* Customize appearance of the arrows */
   .field input[type="number"]::-webkit-inner-spin-button {
     background-color: #4CAF50; 
     border-radius: 0;
@@ -97,5 +90,9 @@ body {
     background-color: #4CAF50; 
     border-radius: 0;
     padding: 5px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
   }
   
