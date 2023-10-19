@@ -48,6 +48,7 @@ class RecipesController < ApplicationController
       render 'show'
     end
   end
+
   def public_recipes
     @public_recipes = Recipe.where(public: true).order(created_at: :desc)
   end
