@@ -16,13 +16,12 @@ class RecipesController < ApplicationController
   end
 
   def show
-    # @recipe = Recipe.includes(recipe_foods: :food).find(params[:id])
     @recipe = Recipe.find(params[:id])
   end
 
   def new
     @recipe = Recipe.new
-    render layout: 'navbar_layout' # Specify the layout here
+    render layout: 'navbar_layout' 
   end
 
   def destroy
@@ -32,13 +31,6 @@ class RecipesController < ApplicationController
     redirect_to recipes_path, notice: 'Recipe was successfully deleted.'
   end
 
-  # def update
-  #   @recipe = Recipe.find(params[:id])
-  #   @recipe.toggle!(:public)
-  #   return unless @recipe.save
-
-  #   redirect_to , noticrecipe_pathe: 'Recipe was successfully updated.'
-  # end
 
   def update
     @recipe = Recipe.find(params[:id])
