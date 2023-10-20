@@ -1,5 +1,4 @@
 
-
 <%= form_with model: recipe_food, url: recipe_recipe_foods_path(@recipe), class: "needs-validation", novalidate: true do |f| %>
   <div>
     <%= f.collection_select :food_id, Food.order(:name), :id, :name_with_measurement_unit, { prompt: "--Select Ingredients--" }, class: "form-control" %>
