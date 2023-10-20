@@ -1,6 +1,10 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
 
+    def index
+    @foods = Food.all
+  end
+
   def new
     @food = Food.new
     render layout: 'navbar_layout'
