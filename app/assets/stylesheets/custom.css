@@ -104,10 +104,6 @@ input:checked + .slider::before {
   text-align: center;
 }
 
-.add-ingredient-button, .generate-shopping-button {
-  margin: 5px;
-}
-
 .food-table {
   width: 100%;
   border-collapse: collapse;
