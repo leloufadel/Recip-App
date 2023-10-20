@@ -100,6 +100,10 @@ input:checked + .slider::before {
   background-color: #45a049;
 }
 
+.button-container {
+  text-align: center;
+}
+
 .food-table {
   width: 100%;
   border-collapse: collapse;

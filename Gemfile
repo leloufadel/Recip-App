@@ -45,7 +45,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 gem 'cancancan'
-
+gem 'database_cleaner'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -55,6 +55,11 @@ gem 'cancancan'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
 end
 
 group :development do

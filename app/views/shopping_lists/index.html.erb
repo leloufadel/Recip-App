@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <div class="col-12 text-center">
+    <h1 class="text text-primary">Shopping List</h1>
+  </div>
+  <div class="card mb-5">
+    <div class="card-body">
+      <div class="d-flex justify-content-between mb-5 mt-3">
+        <label class="text text-primary">Amount of food items to buy: <%= @recipe_foods&.count || 0 %></label>
+        <label class="text text-primary">Total value of food needed: <%= number_to_currency(@needed_money, precision: 2) %></label>
+      </div>
+      <div>
+        <table class="table table-bordered table-hover">
+          <thead class="table-primary">
+            <tr>
+              <th>Food</th>
+              <th>Quantity</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @recipe_foods&.each do |recipe_food| %>
+              <tr>
+                <td><%= recipe_food.food.name %></td>
+                <td><%= recipe_food.quantity %></td>
+                <td><%= number_to_currency(recipe_food.food.price * recipe_food.quantity, unit: '') %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
