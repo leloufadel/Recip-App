@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= stylesheet_link_tag 'navbar' %>
   <%= stylesheet_link_tag 'custom' %>
 </head>
-<%= render 'shared/navbar' %>
 <body>
   <div class="container">
     <h1 class="recipe-name text-center"><%= @recipe.name %></h1>
@@ -22,18 +20,16 @@
           </p>
         </div>
       </div>
-      <div class="details-right">
-       <button class="add-ingredient-button">
-       <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe) %>
-       </button>
+<div class="button-container">
+  <button class="add-ingredient-button">
+    <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe) %>
+  </button>
 
-        <button class="add-ingredient-button">
-<%= link_to 'Generate Shopping List', shopping_lists_path(recipe_id: @recipe.id), class: 'generate-shopping-button' %>
-       </button>
+  <button class="generate-shopping-button">
+    <%= link_to 'Generate Shopping List', shopping_lists_path(recipe_id: @recipe.id) %>
+  </button>
+</div>
 
-
-        </button>
-      </div>
       <div class="actions">
         <%= f.submit 'Save', class: 'save-button' %>
       </div>
