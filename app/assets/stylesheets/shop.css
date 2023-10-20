@@ -1,4 +1,11 @@
-body, h1, h2, h3, p, ul, li, table {
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+table {
   margin: 0;
   padding: 0;
 }
@@ -38,7 +45,8 @@ body {
   margin-top: 20px;
 }
 
-.custom-table th, .custom-table td {
+.custom-table th,
+.custom-table td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
@@ -54,7 +62,8 @@ body {
     overflow-x: auto;
   }
 
-  .custom-table th, .custom-table td {
+  .custom-table th,
+  .custom-table td {
     white-space: nowrap;
   }
 }
