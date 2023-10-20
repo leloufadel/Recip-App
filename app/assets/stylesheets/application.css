@@ -144,12 +144,6 @@ a:hover {
   text-align: left;
 }
 
-.btn-primary {
-  background-color: #3498db;
-  color: #fff;
-  border: 1px solid #3498db;
-}
-
 .btn-danger,
 .delete-button {
   background-color: #e74c3c;
