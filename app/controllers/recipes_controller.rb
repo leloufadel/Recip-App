@@ -21,16 +21,22 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
-    render layout: 'navbar_layout' 
+    render layout: 'navbar_layout'
   end
 
   def destroy
-    @recipe = Recipe.find(params[:id])
-    authorize! :destroy, @recipe
-    @recipe.destroy
-    redirect_to recipes_path, notice: 'Recipe was successfully deleted.'
-  end
+    @recipe = Recipe.find_by(id: params[:id])
 
+    if @recipe
+      if @recipe.destroy
+        redirect_to recipes_path, notice: 'Recipe deleted successfully'
+      else
+        redirect_to recipes_path, alert: 'Failed to delete the recipe'
+      end
+    else
+      redirect_to recipes_path, alert: 'Recipe not found'
+    end
+  end
 
   def update
     @recipe = Recipe.find(params[:id])
