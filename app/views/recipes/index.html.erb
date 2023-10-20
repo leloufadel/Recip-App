@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= stylesheet_link_tag 'navbar' %>
   <%= stylesheet_link_tag 'index' %> 
 </head>
 <body>
-    <div class="content-box">
-  <h1>Welcome To Recipe Page</h1>
+  <div class="content-box">
+    <h1>Welcome To Recipe Page</h1>
+    <%= link_to 'Add New Recipe', new_recipe_path, class: 'btn btn-primary' %>
 
-  <%= link_to 'Add New Recipe', new_recipe_path, class: 'btn btn-primary' %>
-
-  <ul>
-    <% @recipes.each do |recipe| %>
-      <li class="recipe-item">
-        <a href="<%= recipe_path(recipe) %>">
-          <p class="recipe-name"><%= recipe.name %></p>
-        </a>
-        <p>Description: <%= recipe.description %></p>
-        <% if can? :destroy, recipe %>
-          <%= form_with model: recipe, url: recipe_path(recipe), method: :delete, data: { confirm: 'Are you sure you want to delete this recipe?' } do |f| %>
-            <span><%= f.submit "Delete", class: "delete-button" %></span>
-          <% end %>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
-</div>
-
-  <%# </div> %>
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li class="recipe-item">
+          <div class="recipe-info">
+            <div class="left-column">
+              <p class="recipe-name"><%= recipe.name %></p>
+              <% if can? :destroy, recipe %>
+                <%= form_with model: recipe, url: recipe_path(recipe), method: :delete, data: { confirm: 'Are you sure you want to delete this recipe?' } do |f| %>
+                  <%= f.submit "Delete", class: "delete-button" %>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="right-column">
+              <p><%= recipe.description %></p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </body>
 </html>
