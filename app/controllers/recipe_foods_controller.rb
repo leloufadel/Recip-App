@@ -21,8 +21,11 @@ class RecipeFoodsController < ApplicationController
     @recipe_food = RecipeFood.find_by(id: params[:id])
 
     if @recipe_food
-      @recipe_food.destroy
-      redirect_to recipe_path(@recipe), notice: 'RecipeFood deleted successfully'
+      if @recipe_food.destroy
+        redirect_to recipe_path(@recipe), notice: 'RecipeFood deleted successfully'
+      else
+        redirect_to recipe_path(@recipe), alert: 'Failed to delete RecipeFood'
+      end
     else
       redirect_to recipe_path(@recipe), alert: 'RecipeFood not found'
     end
