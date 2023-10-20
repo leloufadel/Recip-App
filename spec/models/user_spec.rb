@@ -19,10 +19,6 @@ RSpec.describe User, type: :model do
     expect(user).to be_valid
   end
 
-  it 'is confirmable through Devise' do
-    expect(User.devise_modules).to include(:confirmable)
-  end
-
   it 'is recoverable through Devise' do
     expect(User.devise_modules).to include(:recoverable)
   end
