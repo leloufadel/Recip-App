@@ -1,33 +1,30 @@
-<div align="center">
-  <br/>
-  <h1><b>Recip APP📖</b></h1>
+# Food Recipe
 
-</div>
+<a name="readme-top"></a>
 
-<!-- TABLE OF CONTENTS -->
+# 📗 Table of Contents
 
-## 📗 Table of Contents
-
-- [📖 Recipe App ](#-catalog-)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
-  - [💻 Getting Started ](#-getting-started-)
-    - [Prerequisites](#prerequisites)
-    - [Setup](#setup)
-    - [Install](#install)
-  - [👥 Author ](#-author-)
-  - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Food Recipe ](#-food-recipe-)
+- [🛠 Built With ](#-built-with-)
+  - [Tech Stack ](#tech-stack-)
+  - [Key Features ](#key-features-)
+- [💻 Getting Started ](#-getting-started-)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage ](#usage-)
+- [👥 Authors ](#-authors-)
+- [🔭 Future Features ](#-future-features-)
+- [🤝 Contributing ](#-contributing-)
+- [⭐️ Show your support ](#️-show-your-support-)
+- [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Recipe App <a name="about-project"></a>
+# 📖 Recipe App <a name="food-recipe"></a>
 
-**Recipe App** The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them..
+The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app allows you to make them public so anyone can access them.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -35,15 +32,29 @@
 
 <details>
   <summary>Client</summary>
-    <li><a href="https://www.ruby-lang.org/en/">Ruby on Rails</a></li>
+  <ul> 
+    <li><a href="https://www.ruby-lang.org/en/">HTML</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">CSS</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Javascript</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul> 
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Rails</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">PostgreSql</a></li>
+  </ul>
 </details>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **Write posts**
-- **Like and comments on posts**
+- MVC
+- Integration Specs
+- Devise Authentication
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -51,50 +62,50 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
 In order to run this project you need:
 
-```
-    ruby on rails
-    ruby
-    postgreSQL
-    bundler
-```
+- [Ruby](https://www.ruby-lang.org/en/) installed and running.
+- You should be able to use [IRB](<https://en.wikipedia.org/wiki/Ruby_(programming_language)#Features>).
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-```bash
-  git clone https://github.com/leloufadel/Recip-App.git
+```
+  git clone git@github.com:rubydevi/food-recipe.git
 ```
 
 ### Install
 
-Install this project with:
+Install thr project dependencies with:
 
-```bash
-  cd blog-app
+```
   bundle install
 ```
 
-it will install the required gemfile for running the project
+### Usage <a name="usage"></a>
 
-## How to run my Project 
-- first you will run rails s 
-- second you will sign_up 
-- third the confirmation token via terminal
-- fourth clik see all post button 
-- then you can create your posts, comments, like and delete them.
+To run the project, execute the following command:
+
+```
+  rails server
+```
+
+### Test <a name="test"></a>
+
+To test the project, execute the following command:
+
+```
+  rspec src/spec/
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="author"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 Lala Aicha EL Vadel
 
@@ -104,15 +115,16 @@ it will install the required gemfile for running the project
 👤 Clarence Atim
 
 - GitHub: [Clarence Atim ](https://github.com/ClarenceAtim)
-- LinkedIn: [Lala Aicha El Vadel](https://www.linkedin.com/in/tegum-clarence-atim/)
-
+- LinkedIn: [Clarence Atim](https://www.linkedin.com/in/tegum-clarence-atim/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Post creation**
+- Authorization
+- Inventory
+- User Management System
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,7 +134,7 @@ it will install the required gemfile for running the project
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/leloufadel/Recip-App/issues).
+Feel free to check the [issues page](https://github.com/rubydevi/food-recipe/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,15 +142,7 @@ Feel free to check the [issues page](https://github.com/leloufadel/Recip-App/iss
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you find this project helpful or interesting, star this repository on GitHub to let me know you like the project. ⭐️
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would like to thank Microverse for teaching and enforcing professional level practices.
+If you like this project and want to support me make cooler projects Give this project a Star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
