@@ -28,4 +28,4 @@ RSpec.describe RecipeFood, type: :model do
     food_association = RecipeFood.reflect_on_association(:food)
     expect(food_association.macro).to eq(:belongs_to)
   end
-end# 
+end

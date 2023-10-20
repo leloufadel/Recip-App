@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  before(:each) do
+    DatabaseCleaner.clean
+  end
   it 'has a valid factory' do
     user = FactoryBot.build(:user)
     expect(user).to be_valid
