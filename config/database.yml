@@ -34,8 +34,6 @@ test:
 
 production:
   <<: *default
-  database: recipe-app_production
-  username: recipe-app
-  password: <%= ENV["HELLO_RAILS_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 
