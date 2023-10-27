@@ -150,3 +150,45 @@ a:hover {
   color: #fff;
   border: 1px solid #e74c3c;
 }
+
+/* New CSS Classes for Styling Input Fields */
+
+/* Center the form container */
+.form-container-new {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Style for input fields */
+.input-new {
+  width: 200px; /* Adjust the width to your preference */
+  margin: 0 auto; /* Center the input fields horizontally */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: left; /* Align text within input fields to the left */
+}
+
+/* Style for buttons */
+/* Add this to your CSS file (styles.css) */
+.btn-new {
+  width: 200px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0074e4; /* Set your preferred button color */
+  color: white; /* Text color for the button */
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: center; /* Center the text within the button */
+}
+
+
+/* Center button horizontally */
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
